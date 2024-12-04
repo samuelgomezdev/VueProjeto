@@ -22,7 +22,7 @@
             required
           />
         </div>
-        <button type="submit">Entrar</button>
+        <button @click="vaiHome" type="submit">Entrar</button>
       </form>
       <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
     </div>
@@ -39,19 +39,11 @@
       };
     },
     methods: {
-      handleSubmit() {
-        if (this.username && this.password) {
-          // Exemplo de lógica de autenticação (simulada)
-          if (this.username === "admin" && this.password === "1234") {
-            alert("Login bem-sucedido!");
-            this.errorMessage = "";
-          } else {
-            this.errorMessage = "Usuário ou senha incorretos.";
-          }
-        } else {
-          this.errorMessage = "Por favor, preencha todos os campos.";
-        }
-      },
+ 
+      vaiHome() {
+        this.$router.push('/Home');
+      }
+
     },
   };
   </script>
