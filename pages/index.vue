@@ -1,3 +1,5 @@
 <template>
-    <Login/>
+    <Header/>
+    <Home/>
+    <Fotter/>
 </template>
